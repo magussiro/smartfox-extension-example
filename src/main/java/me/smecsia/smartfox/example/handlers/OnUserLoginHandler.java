@@ -6,18 +6,18 @@ import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.exceptions.SFSErrorData;
 import com.smartfoxserver.v2.exceptions.SFSException;
 import com.smartfoxserver.v2.exceptions.SFSLoginException;
-import com.smartfoxserver.v2.extensions.BaseServerEventHandler;
 import me.smecsia.smartfox.example.common.ErrorCode;
+import me.smecsia.smartfox.tools.AbstractServerEventHandler;
 
 import static me.smecsia.smartfox.example.common.Constants.Auth.LoginParam.LOGIN_TYPE;
 import static me.smecsia.smartfox.example.common.Constants.Auth.LoginType.*;
 import static me.smecsia.smartfox.example.common.Constants.ErrorCode.*;
 import static org.apache.commons.lang.StringUtils.isEmpty;
 
-public class OnUserLoginHandler extends BaseServerEventHandler {
+public class OnUserLoginHandler extends AbstractServerEventHandler {
 
     @Override
-    public void handleServerEvent(ISFSEvent event) throws SFSException {
+    public void doHandle(ISFSEvent event) throws SFSException {
         String emailOrToken = (String) event.getParameter(SFSEventParam.LOGIN_NAME);
         String userPassword = (String) event.getParameter(SFSEventParam.LOGIN_PASSWORD);
         ISFSObject inputData = (ISFSObject) event.getParameter(SFSEventParam.LOGIN_IN_DATA);

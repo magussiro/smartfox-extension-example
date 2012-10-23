@@ -3,21 +3,22 @@ package me.smecsia.smartfox.example.handlers;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.entities.data.SFSObject;
-import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 import me.smecsia.smartfox.example.common.Constants;
+import me.smecsia.smartfox.tools.AbstractClientRequestHandler;
+import me.smecsia.smartfox.tools.annotations.Security;
 
 import static org.apache.commons.lang.StringUtils.isEmpty;
 
 /**
- *
  * @author Ilya Sadykov
  *         Date: 04.10.12
  *         Time: 12:51
  */
-public class PrivateMessageHandler extends BaseClientRequestHandler {
+@Security(authRequired = true)
+public class PrivateMessageHandler extends AbstractClientRequestHandler {
 
     @Override
-    public void handleClientRequest(User user, ISFSObject isfsObject) {
+    public void doHandle(User user, ISFSObject isfsObject) {
         Integer toUserId = isfsObject.getInt(Constants.Param.TO_USER_ID);
         String message = isfsObject.getUtfString(Constants.Param.MESSAGE);
         if (toUserId == null) {
