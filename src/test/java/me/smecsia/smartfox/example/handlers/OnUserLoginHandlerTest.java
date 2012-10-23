@@ -14,8 +14,6 @@ import static me.smecsia.smartfox.example.common.Constants.Auth.LoginType.LOGIN_
 import static me.smecsia.smartfox.example.common.Constants.ErrorCode.*;
 
 /**
- * Copyright (c) 2012 i-Free. All Rights Reserved.
- *
  * @author Ilya Sadykov
  *         Date: 09.10.12
  *         Time: 19:04

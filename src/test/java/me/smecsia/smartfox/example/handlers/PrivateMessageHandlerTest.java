@@ -7,8 +7,6 @@ import me.smecsia.smartfox.testing.AbstractRequestHandlerTest;
 import org.junit.Test;
 
 /**
- * Copyright (c) 2012 i-Free. All Rights Reserved.
- *
  * @author Ilya Sadykov
  *         Date: 04.10.12
  *         Time: 17:55
