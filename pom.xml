@@ -101,7 +101,7 @@
         <dependency>
             <artifactId>smartfox-testing</artifactId>
             <groupId>me.smecsia.smartfox</groupId>
-            <version>${project.version}</version>
+            <version>0.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
