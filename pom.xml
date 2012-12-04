@@ -30,7 +30,7 @@
         <dependency>
             <artifactId>smartfox-tools</artifactId>
             <groupId>me.smecsia.smartfox</groupId>
-            <version>0.5</version>
+            <version>0.6</version>
         </dependency>
 
         <!-- SMARTFOX -->
@@ -101,7 +101,7 @@
         <dependency>
             <artifactId>smartfox-testing</artifactId>
             <groupId>me.smecsia.smartfox</groupId>
-            <version>0.2</version>
+            <version>0.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
